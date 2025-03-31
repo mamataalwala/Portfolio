@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+	<!-- <link rel="stylesheet" href="style.css"> -->
+     <link rel="stylesheet" href="contactMedia.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="back-btn">⬅ Back</a>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-image">
+                <img src="contact2.png" alt="Contact Illustration">
+            </div>
+            <div class="contact-form">
+                <h2>Contact Me</h2>
+                <p>Let's connect and turn your ideas into reality!</p>
+                <form name="submit-to-google-sheet">
+                    <label for="name">Name *</label>
+                    <input type="text" name="Name"  id="name" required>
+                    
+                    <label for="email">Email *</label>
+                    <input type="email" name="Email" id="email" required>
+                    
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="Phone" id="phone">
+                    
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="Message" required></textarea>
+                    
+                    <button type="submit" class="contact-btn">Contact</button>
+                </form>
+
+                <span id="msg" >  </span>
+            </div>
+        </div>
+        
+    </section>
+	<footer>
+		<div class="copyright">
+			<div id="call-details">
+
+				© 2024 &nbsp;&nbsp;&nbsp;Created By Mamata Alwala
+			</div>
+			<div class="icons" style="font-size: 25px;">
+				Lets Connect Digitally ...
+
+			</div>
+			<div class="icon">
+				<!-- <a href="www.linkedin.com/in/mamata-alwala-331748318" target="_main"><i class="fa-brands fa-linkedin"></i></a> -->
+				<a href="https://www.linkedin.com/in/mamata-alwala-331748318" target="_blank">
+					<i class="fa-brands fa-linkedin"></i>
+				</a>
+
+				<a href="https://github.com/mamataalwala" target="_blank">
+					<i class="fa-brands fa-github"></i>
+				</a>
+				<a href="mailto:mamataalwala@example.com" target="_blank">
+					<i class="fa-solid fa-square-envelope"></i>
+				</a>
+				<a href="https://wa.me/8180064779" target="_blank">
+					<img style="height: 30px; width: 30px;" src="whatsapp.png" alt="whatsapp">
+				</a>
+				<a href="tel:+8180064779" target="_blank">
+					<img style="height: 30px; width: 30px;" src="cantact.png" alt="contact">
+				</a>
+
+			</div>
+		</div>
+		
+		
+</footer>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwdMsqi-SAhFTG79DW9Qhhljm9twpStipaANIGZrfTfmBaN--zZet2JCzAPsSVXRTwZUA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent Successfully"
+            setTimeout((function(){
+                msg.innerHTML=""
+                
+            }), 1000);
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

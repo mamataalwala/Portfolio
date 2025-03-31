@@ -1,0 +1,175 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #210F37; /* Your project navbar color */
+    padding: 15px 20px;
+    z-index: 1000;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    /* transition: 0.3s; */
+}
+
+.back-btn:hover {
+    color: #ff004f;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #210F37;
+    color: white;
+    padding-top: 60px;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    align-items: center;
+    background: #1A0D2D;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Image Section */
+.contact-image img {
+    width: 300px;
+    height: auto;
+}
+
+/* Form */
+.contact-form {
+    margin-left: 30px;
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #B0A7C0;
+}
+
+/* Form Fields */
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ff004f;
+    border-radius: 5px;
+    background: #1A0D2D;
+    color: white;
+}
+
+/* Contact Button */
+.contact-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #ff004f;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.contact-btn:hover {
+    background-color: #ff3366;
+}
+
+/* ---------------footer ---------------- */
+.copyright {
+    height: auto;
+    width: 100%;
+    background-color: #190b29;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 16px;
+}
+
+#call-details {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.icons {
+    font-size: 20px;
+    font-style: italic;
+    color: #ffcc00;
+}
+
+.icon {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icon a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.icon a:hover {
+    transform: scale(1.2);
+    color: #ff004f;
+}
+
+.icon img {
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon img:hover {
+    transform: scale(1.2);
+}
+
+
+
+/*-----------message submit--------*/
+#msg{
+    color: #61b752;
+    margin-top: -10px;
+    display: block;
+}
